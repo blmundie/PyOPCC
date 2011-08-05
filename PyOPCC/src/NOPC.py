@@ -92,13 +92,13 @@ item4=group2.OPCItems.AddItem('Channel_2.Device_3.Tag_1', 22)
 #retval=group.AsyncRead(2,sh,err,123)
 #Works if you pad the ServerHandle array with an initial 0
 #retval=group.AsyncRefresh(OPC_Device,123)
-#Works!
+#Works!!!
 #ret=group.AsyncCancel(retval)
-#Works!
+#Works!!!
 #retval=group.AsyncWrite(2,sh,(0,.5,2),err,123)
 #Works if you pad ServerHandle and Value arrays with an initial 0
 #retval=item.Read(OPC_Device)
-#Works!
+#Works!!!
 #print retval
 
 end = time.clock() + 60
