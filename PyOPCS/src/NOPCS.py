@@ -49,7 +49,7 @@ class BasicXDAServer(XDAServer):
         return d
    
     ######################### OPC Operations #######################
-    def Read(self,(IPH,inOptions,outOptions)):
+    def Read(self,IPH_inOptions_outOptions):
         ''' Return a dummy value for all read requests '''
         newIPH = ItemPairHolder()
         for inItem, outItem in IPH:
@@ -65,7 +65,7 @@ class BasicXDAServer(XDAServer):
                                             'No such OPC Item'))
         return super(BasicXDAServer,self).Read((newIPH,inOptions,outOptions))
         
-    def Write(self,(IPH,inOptions,outOptions)):
+    def Write(self,IPH_inOptions_outOptions):
         ''' Write to the item dictionary '''
 
         for inItem,outItem in IPH:
@@ -98,7 +98,7 @@ class BasicXDAServer(XDAServer):
         d.addErrback(log.err)
         return d
 
-    def Browse(self,(IPH,inOptions,outOptions)):
+    def Browse(self,IPH_inOptions_outOptions):
         ''' Create OPC Browse data
         '''
     
@@ -112,7 +112,7 @@ class BasicXDAServer(XDAServer):
         return super(BasicXDAServer,self).Browse((IPH,inOptions,outOptions))
             
     
-    def GetProperties(self,(IPH,inOptions,outOptions)):
+    def GetProperties(self,IPH_inOptions_outOptions):
         ''' Create OPC GetProperties data
         '''
         # Every item has the same property for this test client
