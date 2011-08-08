@@ -104,7 +104,7 @@ item4=group2.OPCItems.AddItem('Channel_2.Device_3.Tag_1', 22)
 end = time.clock() + 60
 while (time.clock() < end and not msvcrt.kbhit()):
     if pythoncom.PumpWaitingMessages(): #@UndefinedVariable
-        break
+        break # maybe broken
         
 
 OPC.Disconnect()    
